@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <h1 id="title">Travel Survey</h1>
+    <p id="description">
+      Please fill out this survey to help us understand your travel preferences
+      and experiences. Your feedback is valuable to us!
+    </p>
+    <form action="" id="survey-form">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name" id="name-label">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Name" required />
+
+        <label for="email" id="email-label">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          pattern="[^ @]*@[^ @]*"
+          required
+        />
+
+        <label for="number" id="number-label">Age:</label>
+        <input
+          type="number"
+          id="number"
+          name="number"
+          placeholder="Age"
+          min="0"
+          max="120"
+          required
+        />
+        <label for="dropdown-label">Country:</label>
+        <select id="dropdown" name="dropdown" required>
+          <option value="" disabled selected>Select your country</option>
+          <option value="usa">USA</option>
+          <option value="canada">Canada</option>
+          <option value="uk">UK</option>
+          <option value="australia">Australia</option>
+          <option value="other">Other</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Do you want to travel?</legend>
+        <input type="radio" id="yes" name="radio" value="yes" required />
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="radio" value="no" required />
+        <label for="no">No</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Packages you want to avail</legend>
+        <input
+          type="checkbox"
+          id="package1"
+          name="package1"
+          value="adventure"
+        />
+        <label for="package1">Adventure</label>
+        <input
+          type="checkbox"
+          id="package2"
+          name="package2"
+          value="relaxation"
+        />
+        <label for="package2">Relaxation</label>
+        <input type="checkbox" id="package3" name="package3" value="cultural" />
+        <label for="package3">Cultural</label>
+        <input type="checkbox" id="package4" name="package4" value="family" />
+        <label for="package4">Family</label>
+      </fieldset>
+      <label for="notes"></label>
+      <textarea name="notes" id="notes" cols="25" rows="25">
+        Additional Notes: Please share any specific preferences or experiences
+        you would like us to know about your travel interests.
+      </textarea>
+
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+</html>
