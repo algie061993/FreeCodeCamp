@@ -28,7 +28,7 @@ console.log(
   `Here is an example of accessing the last letter in the word ${subject}.`
 );
 console.log(subject[subject.length - 1]);
-// print out it using a variable
+// print out the last character of the letter using a variable
 console.log(lastCharacter);
 
 console.log(
