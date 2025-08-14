@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Change Event</title>
   </head>
   <body>
-    <h1>Change Events</h1>
-    <p>
-      The change event is fired when the value of an input element changes (Ex.
-      type a name and click away)
-    </p>
     <form>
+      <h1>Change Events</h1>
+      <p>
+        The change event is fired when the value of an input element changes
+        (Ex. type a name and click away)
+      </p>
       <label>
         Favorite color:
         <select id="color-select">
@@ -21,17 +22,14 @@
           <option value="blue">Blue</option>
         </select>
       </label>
-      <br />
       <label>
         Do you like pizza?
         <input type="checkbox" id="pizza-checkbox" />
       </label>
-      <br />
       <label>
         Enter your name:
         <input type="text" id="name-input-changeEvent" />
       </label>
-      <br />
       <div id="output">Change Event Output</div>
       <h1>Input Event</h1>
       <p>
@@ -42,8 +40,8 @@
         Enter your name:
         <input type="text" id="name-input-inputEvent" />
       </label>
+      <div id="input-output">Input Event Output</div>
     </form>
-    <div id="input-output">Input Event Output</div>
 
     <script src="./Javascript/script.js"></script>
   </body>
