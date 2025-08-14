@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <button class="button">Click me!</button>
+      <button class="button">Click me too!</button>
+      <button class="button">And me!</button>
+
+      <p>
+        The "Click me!" button will not truning red because its have a
+        stopPropagation() Event and it is the first button match(".button")
+        selector. (Remember that when it run it reads from top to bottom.) and
+        that's the Delegation Event. <br />The 2nd and 3rd buttons will turn red
+        because the stopPropagation() Event is applied to the first button
+        "Click me!" and that's the Bubbling Event.
+      </p>
+    </div>
+
+    <script src="./Javascript/script.js"></script>
+  </body>
+</html>
