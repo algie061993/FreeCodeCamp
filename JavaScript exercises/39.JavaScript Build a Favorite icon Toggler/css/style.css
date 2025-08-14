@@ -1,0 +1,82 @@
+.filled {
+  color: red;
+  font-size: 24px;
+}
+.unfilled {
+  color: gray;
+  font-size: 24px;
+}
+.filled:hover {
+  cursor: pointer;
+  color: darkred;
+}
+.unfilled:hover {
+  cursor: pointer;
+  color: darkgray;
+}
+.filled:active {
+  color: darkred;
+}
+.unfilled:active {
+  color: darkgray;
+}
+.filled:focus {
+  outline: none;
+}
+.unfilled:focus {
+  outline: none;
+}
+.filled:focus-visible {
+  outline: 2px solid red;
+}
+.unfilled:focus-visible {
+  outline: 2px solid gray;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  display: inline;
+  margin-right: 10px;
+}
+li a {
+  text-decoration: none;
+  color: inherit;
+}
+li a:hover {
+  text-decoration: underline;
+}
+li a:focus {
+  outline: 2px solid blue;
+}
+li a:focus-visible {
+  outline: 2px solid blue;
+}
+li a:active {
+  color: darkblue;
+}
+li a:visited {
+  color: purple;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: inherit;
+}
+button:hover {
+  color: darkblue;
+}
+button:focus {
+  outline: 2px solid blue;
+}
+button:focus-visible {
+  outline: 2px solid blue;
+}
+button:active {
+  color: darkblue;
+}
