@@ -6,7 +6,11 @@
     <title>Change Event</title>
   </head>
   <body>
-    <h1>Change Event</h1>
+    <h1>Change Events</h1>
+    <p>
+      The change event is fired when the value of an input element changes (Ex.
+      type a name and click away)
+    </p>
     <form>
       <label>
         Favorite color:
@@ -25,11 +29,22 @@
       <br />
       <label>
         Enter your name:
-        <input type="text" id="name-input" />
+        <input type="text" id="name-input-changeEvent" />
+      </label>
+      <br />
+      <div id="output">Change Event Output</div>
+      <h1>Input Event</h1>
+      <p>
+        The input event is fired when the value of an input element changes (Ex.
+        type a name and you will see every keystroke or letter will appear)
+      </p>
+      <label>
+        Enter your name:
+        <input type="text" id="name-input-inputEvent" />
       </label>
     </form>
+    <div id="input-output">Input Event Output</div>
 
-    <div id="output"></div>
     <script src="./Javascript/script.js"></script>
   </body>
 </html>

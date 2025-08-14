@@ -1,7 +1,9 @@
 const colorSelect = document.getElementById("color-select");
 const pizzaCheckbox = document.getElementById("pizza-checkbox");
-const nameInput = document.getElementById("name-input");
+const nameInput = document.getElementById("name-input-changeEvent");
+const nameInputInput = document.getElementById("name-input-inputEvent");
 const outputDiv = document.getElementById("output");
+const inputOutputDiv = document.getElementById("input-output");
 
 // Add event listener to color select
 colorSelect.addEventListener("change", () => {
@@ -15,10 +17,12 @@ pizzaCheckbox.addEventListener("change", () => {
   } pizza`;
 });
 
-// Add event listener to name input
+// Add event listener to name input for change event
 nameInput.addEventListener("change", () => {
   outputDiv.innerText = `You entered ${nameInput.value}`;
 });
 
-// Note: If you want to listen to input event instead of change event,
-// you can replace 'change' with 'input' in the above code.
+// Add event listener to name input for input event
+nameInputInput.addEventListener("input", () => {
+  inputOutputDiv.innerText = `You typed ${nameInputInput.value}`;
+});
