@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>innerText vs textContent vs innerHTML</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h2>innerText Example</h2>
+    <div id="innerTextExample" class="example-box">
+      This is <span class="hidden">hidden text</span> a <b>bold</b> example.
+    </div>
+    <button id="innerTextButton">Show innerText</button>
+    <div id="innerTextResult"></div>
+    <p>
+      innerText: Returns only visible text (ignores hidden elements, respects
+      CSS).
+    </p>
+
+    <h2>textContent Example</h2>
+    <div id="textContentExample" class="example-box">
+      This is <span class="hidden">hidden text></span> a <b>bold</b> example.
+    </div>
+    <button id="textContentButton">Show textContent</button>
+    <div id="textContentResult"></div>
+    <p>
+      textContent: Returns all text, including hidden elements, without
+      formatting.
+    </p>
+
+    <h2>innerHTML Example</h2>
+    <div id="innerHTMLExample" class="example-box">
+      This is <span class="hidden">hidden text</span> a <b>bold</b> example.
+    </div>
+    <button id="innerHTMLButton">Show innerHTML</button>
+    <div id="innerHTMLResult"></div>
+    <p>innerHTML: Returns the HTML markup (tags and all).</p>
+    <script src="JavaScript/script.js"></script>
+  </body>
+</html>
