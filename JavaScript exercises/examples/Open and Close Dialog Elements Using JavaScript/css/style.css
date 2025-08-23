@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  margin: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+dialog {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  top: 40%;
+  left: 50%;
+  right: 50%;
+  bottom: 75%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 9999;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog button {
+  margin-top: 10px;
+}
+
+p {
+  text-align: center;
+}
