@@ -1,3 +1,5 @@
+// JavaScript exercises/44.javaScript Build a Set of Football Team Cards/JavaScript/script.js
+
 const footballTeam = {
   team: "Manchester United",
   year: 2022,
@@ -24,6 +26,40 @@ teamCoach.textContent = footballTeam.headCoach;
 teamName.textContent = footballTeam.team;
 teamYear.textContent = footballTeam.year;
 
+// add an event listener to the dropdown menu
+selectPosition.addEventListener("change", (e) => {
+  const selectedPosition = e.target.value;
+
+  // filter the players by position
+  const filteredPlayers = footballTeam.players.filter((player) => {
+    if (selectedPosition === "all") {
+      return true;
+    }
+    return player.position === selectedPosition;
+  });
+
+  // update the player cards container
+  playerCardsContainer.innerHTML = "";
+  filteredPlayers.forEach((player) => {
+    const playerCard = document.createElement("div");
+    playerCard.classList.add("player-card");
+
+    const playerName = document.createElement("h2");
+    playerName.textContent = player.name;
+    if (player.isCaptain) {
+      playerName.textContent += " (Captain)";
+    }
+    playerCard.appendChild(playerName);
+
+    const playerPosition = document.createElement("p");
+    playerPosition.textContent = `Position: ${player.position}`;
+    playerCard.appendChild(playerPosition);
+
+    playerCardsContainer.appendChild(playerCard);
+  });
+});
+
+// initially show all players
 footballTeam.players.forEach((player) => {
   const playerCard = document.createElement("div");
   playerCard.classList.add("player-card");
@@ -40,27 +76,4 @@ footballTeam.players.forEach((player) => {
   playerCard.appendChild(playerPosition);
 
   playerCardsContainer.appendChild(playerCard);
-});
-
-selectPosition.addEventListener("change", (e) => {
-  const selectedPosition = e.target.value;
-  const playerCards = playerCardsContainer.children;
-
-  if (selectedPosition === "all") {
-    for (let i = 0; i < playerCards.length; i++) {
-      playerCards[i].style.display = "block";
-    }
-  } else {
-    for (let i = 0; i < playerCards.length; i++) {
-      const playerCard = playerCards[i];
-      const playerPosition = playerCard.children[1].textContent
-        .split(": ")[1]
-        .trim();
-      if (playerPosition.toLowerCase().includes(selectedPosition)) {
-        playerCard.style.display = "block";
-      } else {
-        playerCard.style.display = "none";
-      }
-    }
-  }
 });
