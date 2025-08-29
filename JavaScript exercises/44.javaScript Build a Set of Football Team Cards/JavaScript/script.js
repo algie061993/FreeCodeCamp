@@ -43,7 +43,6 @@ selectPosition.addEventListener("change", (e) => {
   filteredPlayers.forEach((player) => {
     const playerCard = document.createElement("div");
     playerCard.classList.add("player-card");
-
     const playerName = document.createElement("h2");
     playerName.textContent = player.name;
     if (player.isCaptain) {
