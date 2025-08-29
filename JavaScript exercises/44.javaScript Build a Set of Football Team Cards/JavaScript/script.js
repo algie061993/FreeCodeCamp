@@ -37,7 +37,7 @@ selectPosition.addEventListener("change", (e) => {
     }
     return player.position === selectedPosition;
   });
-
+  debugger;
   // update the player cards container
   playerCardsContainer.innerHTML = "";
   filteredPlayers.forEach((player) => {
