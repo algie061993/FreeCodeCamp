@@ -27,3 +27,4 @@ const golfScore = (par, strokes) => {
 };
 console.log(golfScore(5, 4)); // "Birdie"
 console.log(golfScore(4, 1)); // "Hole-in-one!"
+console.log(golfScore(4, 2)); // "Eagle"
