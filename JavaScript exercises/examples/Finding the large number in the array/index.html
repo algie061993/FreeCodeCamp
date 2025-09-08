@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Finding the large number in the array</title>
+  </head>
+  <body>
+    <h1>Finding the large number in the array</h1>
+
+    <dialog id="for-loop-dialog">
+      <fieldset>
+        <legend>Using (for Loop)</legend>
+        <label for="for-loop-input" name="for-loop-input"
+          ><strong
+            >Enter a number and press enter key to add to the array.</strong
+          ></label
+        >
+        <input
+          type="number"
+          id="for-loop-input"
+          placeholder="Enter a number."
+        />
+      </fieldset>
+      <p>Array of numbers: <span id="for-loop-array"></span></p>
+      <p id="for-loop-result"></p>
+      <button id="for-loop-button-for-loop">Find the largest number</button>
+      <button id="close-for-loop-dialog">Close</button>
+    </dialog>
+
+    <dialog id="max-dialog">
+      <fieldset>
+        <legend>Math.max() Function</legend>
+        <label for="max-input" name="max-input"
+          ><strong
+            >Enter a number and press enter key to add to the array.</strong
+          ></label
+        >
+        <input type="number" id="max-input" placeholder="Enter a number." />
+      </fieldset>
+      <p>Array of numbers: <span id="max-array"></span></p>
+      <p id="max-result"></p>
+      <button id="max-button-max">Find the largest number</button>
+      <button id="close-max-dialog">Close</button>
+    </dialog>
+
+    <button id="open-for-loop-dialog">Using (for Loop)</button>
+    <button id="open-max-dialog">Math.max() Function</button>
+
+    <div class="info">
+      <p>
+        In this example, we are using the Math.max() function and for loop to
+        find the largest number in the array.
+      </p>
+      <pre>
+        <code>
+            const numbers = &#91;1,2,3,4,5,6,7,8,9,10,30,60,100&#93;;
+            const maxNumber = Math.max(...numbers)
+            let largestNumber = numbers&#91;0&#93;
+
+            for(let i=0; i&lt;numbers.length; i++){
+                if (numbers&#91;i&#93;&gt;largestNumber){
+                    largestNumber=numbers&#91;i&#93;
+                }
+            
+            }
+            console.log(`what is the largest number in this array of numbers ${numbers}`)
+            console.log(`The largest number ${maxNumber} using the Math.max() function`)
+            console.log(`The largest number ${largestNumber} using the for loop only`)
+        </code>
+      </pre>
+      <span>the out put of the console log is: 100</span>
+    </div>
+
+    <script src="./JavaScript/script.js"></script>
+  </body>
+</html>
