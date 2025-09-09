@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Count the vowels</title>
+  </head>
+  <body>
+    <h1>Count the vowels of a word</h1>
+    <div id="mainContainer">
+      <div class="container">
+        <p>
+          Type a word in the input field and click the button to see the number
+          of vowels. Using For Loop method.
+        </p>
+        <input type="text" id="wordInputForLoop" placeholder="Enter a word" />
+        <button id="countButtonForLoop">Count Vowels</button>
+        <p id="resultForLoop">The result will show here.</p>
+        <pre>
+        <code>
+const string = "JavaScript";
+let count = 0;
+for (let i = 0; i &lt; string.length; i++) {
+    if (
+        string[i] === "a" ||
+        string[i] === "e" ||
+        string[i] === "i" ||
+        string[i] === "o" ||
+        string[i] === "u" ||
+        string[i] === "A" ||
+        string[i] === "E" ||
+        string[i] === "I" ||
+        string[i] === "O" ||
+        string[i] === "U"
+    ) {
+        count++;
+    }
+}
+console.log(count); // Output: 3
+        </code>
+      </pre>
+      </div>
+
+      <div class="container">
+        <p>
+          Type a word in the input field and click the button to see the number
+          of vowels. Using Built-in method match() fuction. also you can use
+          includes() with slpit() and filter() etc.
+        </p>
+        <input type="text" id="wordInputIncludes" placeholder="Enter a word" />
+        <button id="countButtonIncludes">Count Vowels</button>
+        <p id="resultForIncludes">The result will show here.</p>
+        <pre>
+        <code>
+const str = "JavaScript";
+const vowels = str.match(/[aeiou]/gi);
+console.log(vowels.length); // Output: 3
+        </code>
+      </pre>
+      </div>
+    </div>
+    <script src="./JavaScript/script.js"></script>
+  </body>
+</html>
