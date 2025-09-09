@@ -8,7 +8,7 @@
   </head>
   <body>
     <h1>Reverse a word</h1>
-    <div id="mainContainer">
+    <div class="mainContainer">
       <div class="container">
         <p>
           Type a word in the input field and click the button to see the
@@ -17,6 +17,17 @@
         <input type="text" id="wordInputForLoop" placeholder="Enter a word" />
         <button id="reverseButtonForLoop">Reverse</button>
         <p id="result">The result will show here.</p>
+
+        <pre>
+            <code>
+const string = "JavaScript";
+let reverseStr = "";
+    for (let i = string.length - 1; i >= 0; i--) {
+        reverseStr += string[i];
+}
+console.log(reverseStr); // tpircSavaJ
+            </code>
+        </pre>
       </div>
       <div class="container">
         <p>
@@ -26,8 +37,17 @@
         <input type="text" id="wordInputBuiltIn" placeholder="Enter a word" />
         <button id="reverseButtonBuiltIn">Reverse</button>
         <p id="resultBuiltIn">The result will show here.</p>
+
+        <pre>
+            <code>
+const string = "JavaScript";
+let reverseStr = string.split('').reverse().join('');
+console.log(reverseStr); // tpircSavaJ
+            </code>
+        </pre>
       </div>
     </div>
+
     <script src="./JavaScript/script.js"></script>
   </body>
 </html>

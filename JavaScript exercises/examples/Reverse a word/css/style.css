@@ -7,12 +7,9 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
-#mainContainer {
+.mainContainer {
   text-align: center;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   width: auto;
   height: auto;
   display: flex;
@@ -22,8 +19,9 @@ body {
 }
 
 @media (max-width: 768px) {
-  #mainContainer {
+  .mainContainer {
     flex-direction: column;
+    width: 90%;
   }
 }
 
@@ -34,16 +32,36 @@ body {
   border-radius: 10px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   width: 50%;
+  max-height: fit-content;
 }
 
-@media (max-width: 768px) {
+pre {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: auto;
+  max-height: auto;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+@media (max-width: 300px) {
   .container {
+    display: flex;
+    flex-direction: column;
     width: 90%;
-    margin: 5px;
-    padding: 5px;
-    border: 2px rgba(0, 0, 0, 0.37);
-    border-radius: 10px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  pre {
+    overflow: auto;
+    max-height: auto; /* adjust this value to your liking */
+  }
+
+  code {
+    white-space: pre-wrap;
+    word-break: break-all;
   }
 }
 
@@ -76,30 +94,11 @@ button:hover {
 #result {
   margin-top: 20px;
   font-size: 18px;
-  color: black;
+  color: #333;
 }
 
 .resultBuiltIn {
   margin-top: 20px;
   font-size: 18px;
   color: #333;
-  animation: floatDown 0.5s ease-out, fadeOut 2s 2s forwards;
-}
-
-@keyframes floatDown {
-  0% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
