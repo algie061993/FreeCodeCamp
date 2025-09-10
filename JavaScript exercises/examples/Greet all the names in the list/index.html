@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Greet all the names in the list</title>
+  </head>
+  <body>
+    <h1>Greet all the names in list</h1>
+    <div class="container">
+      <div id="errorMassage"></div>
+
+      <h2>The list of names will show here</h2>
+      <label for="selectAll">Select all</label>
+      <input type="checkbox" name="selectAll" id="selectAll" />
+      <div id="listOfNames"></div>
+
+      <div id="output">
+        <h2>The Greetings will show here</h2>
+      </div>
+
+      <dialog id="addModal">
+        <label for="names">list of names</label>
+        <input type="text" name="names" id="names" />
+        <button id="addAddModal">Add</button>
+        <button id="closeAddModal">Close</button>
+      </dialog>
+
+      <button id="add-name">Add a name</button>
+      <button id="remove">Remove</button>
+    </div>
+
+    <script src="./JavaScript/script.js"></script>
+  </body>
+</html>
