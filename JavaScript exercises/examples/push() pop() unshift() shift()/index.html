@@ -9,17 +9,52 @@
   <body>
     <h1>This is how push() pop() unshift() shift() works</h1>
     <div id="container">
-      <div id="output"></div>
+      <div id="resultContainer">
+        <h2>Stack of words will show here</h2>
+        <div id="output"></div>
+      </div>
       <dialog id="pushModal">
+        <div id="error"></div>
         <label for="word">Enter a word</label>
         <input type="text" name="word" id="word" />
         <button id="add">Push to the array</button>
         <button id="close">Close</button>
       </dialog>
-      <button id="push">Push</button>
-      <button id="pop">Pop</button>
-      <button id="unshift">Unshift</button>
-      <button id="shift">Shift</button>
+      <dialog id="unshiftModal">
+        <div id="errorUn"></div>
+        <label for="word">Enter a word</label>
+        <input type="text" name="wordUn" id="wordUn" />
+        <button id="addUn">Unshift to the array</button>
+        <button id="closeUn">Close</button>
+      </dialog>
+      <div id="buttonContainer">
+        <button id="push">Push</button>
+        <button id="pop">Pop</button>
+        <button id="unshift">Unshift</button>
+        <button id="shift">Shift</button>
+      </div>
+      <div id="explaination">
+        <pre>
+            <code>
+                push() adds a new element to the end of an array and returns the new length of the array.
+                pop() removes the last element from an array and returns that element.
+                unshift() adds a new element to the beginning of an array and returns the new length of the array.
+                shift() removes the first element from an array and returns that element.
+
+                let arr = [1, 2, 3, 4, 5];
+
+                arr.push(6); // [1, 2, 3, 4, 5, 6]
+                arr.push(7, 8); // [1, 2, 3, 4, 5, 6, 7, 8]
+
+                arr.pop(); // [1, 2, 3, 4, 5, 6, 7]
+
+                arr.unshift(0); // [0, 1, 2, 3, 4, 5, 6, 7]
+                arr.unshift(8, 9); // [8, 9, 0, 1, 2, 3, 4, 5, 6, 7]
+
+                arr.shift(); // [9, 0, 1, 2, 3, 4, 5, 6, 7]
+            </code>
+        </pre>
+      </div>
     </div>
     <script src="./JavaScript/script.js"></script>
   </body>
