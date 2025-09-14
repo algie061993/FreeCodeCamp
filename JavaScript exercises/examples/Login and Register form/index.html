@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Log in and register</title>
+  </head>
+  <body>
+    <div class="card">
+      <form action="submit">
+        <fieldset>
+          <legend>Login</legend>
+          <label for="emailLogin">Email:</label>
+          <input
+            type="email"
+            id="emailLogin"
+            name="emailLogin"
+            placeholder="Email"
+            required
+          />
+          <label for="passwordLogin">Password:</label>
+          <input
+            type="password"
+            id="passwordLogin"
+            name="passwordLogin"
+            placeholder="Password"
+            required
+          />
+          <button type="submit" id="submit">Submit</button>
+          <button type="button" id="register">Register</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <dialog id="register-modal">
+      <div class="card">
+        <form action="submit">
+          <fieldset>
+            <legend>Register</legend>
+            <label for="emailRegister">Email:</label>
+            <input
+              type="email"
+              id="emailRegister"
+              name="emailRegister"
+              placeholder="Email"
+              required
+            />
+            <label for="passwordRegister">Password:</label>
+            <input
+              type="password"
+              id="passwordRegister"
+              name="passwordRegister"
+              placeholder="Password"
+              required
+            />
+            <button type="submit" id="registered">Submit</button>
+            <button type="button" id="close-modal">Close</button>
+          </fieldset>
+        </form>
+      </div>
+    </dialog>
+
+    <script src="./JavaScript/script.js"></script>
+  </body>
+</html>
