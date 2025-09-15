@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Log in and register</title>
+    <title>Login and register</title>
   </head>
   <body>
     <div class="card">
-      <form action="submit">
+      <form>
         <fieldset>
           <legend>Login</legend>
+          <div id="errorLogin"></div>
           <label for="emailLogin">Email:</label>
           <input
             type="email"
@@ -35,9 +36,10 @@
 
     <dialog id="register-modal">
       <div class="card">
-        <form action="submit">
+        <form>
           <fieldset>
             <legend>Register</legend>
+            <div id="errorRegister"></div>
             <label for="emailRegister">Email:</label>
             <input
               type="email"
