@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Build a Symmetric Difference Function</title>
+</head>
+<body>
+    <h1>Build a Symmetric Difference Function</h1>
+    <h2>In this lab, you will practice using higher order functions to find the symmetric difference between two arrays.</h2>
+    <p>Right click on the browser and choose inspect to see the output</p>
+    <pre>
+        <code>
+function diffArray(arr1, arr2) {
+  // 1. Filter arr1: Keep elements NOT present in arr2
+  const uniqueInArr1 = arr1.filter(item => !arr2.includes(item));
+  
+  // 2. Filter arr2: Keep elements NOT present in arr1
+  const uniqueInArr2 = arr2.filter(item => !arr1.includes(item));
+  
+  // 3. Combine the unique elements from both filters
+  return uniqueInArr1.concat(uniqueInArr2);
+}
+
+console.log(diffArray(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]))
+        </code>
+    </pre>
+    <script src="./JavaScript/script.js"></script>
+</body>
+</html>
