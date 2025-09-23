@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Build a Sum All Primes Calculator</title>
+</head>
+<body>
+    <h1>Build a Sum All Primes Calculator</h1>
+    <h2>In this lab, you will build a calculator that takes a number and returns the sum of all prime numbers that are less than or equal to that number.</h2>
+    <p>Right click to the browser and choose inspect to see the output</p>
+    <pre>
+        <code>
+function sumPrimes (num) {
+  let count = 0;
+  let sum = 0;
+
+  const isPrime = count =>{
+    for(let i =2; i< count; i++){
+      if (count % i === 0){
+        return false;
+      }
+    }
+    return count >= 2
+  }
+
+  while (num >= count){
+    if(isPrime(count)){
+      sum+=count;
+    }
+    count++
+  }
+  return sum
+}
+
+console.log(sumPrimes(10))
+        </code>
+    </pre>
+    <script src="./JavaScript/script.js"></script>
+</body>
+</html>
